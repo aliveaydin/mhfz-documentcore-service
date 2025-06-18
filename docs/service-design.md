@@ -182,6 +182,14 @@ The target object is a sibling object, meaning that the relation is a many-to-on
 On Delete: Set Null
 Required: No
 
+- **encryptionType**: String
+  Relation to `fileobject`.id
+
+The target object is a sibling object, meaning that the relation is a many-to-one or one-to-one relationship from this object to the target.
+
+On Delete: Set Null
+Required: Yes
+
 ### Session Data Properties
 
 Session data properties are used to store data that is specific to the user session, allowing for personalized experiences and temporary data storage.
