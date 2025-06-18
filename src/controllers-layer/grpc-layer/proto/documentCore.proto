@@ -1,0 +1,62 @@
+
+syntax = "proto3";
+
+package documentCore;
+
+import "google/protobuf/struct.proto";
+import "google/protobuf/timestamp.proto";
+message document {
+    string id = 1;
+    string tenantId = 2;
+    string ownerUserId = 3;
+    string originalFilename = 4;
+    int32 status = 5;
+    string currentVersionId = 6;
+    string retentionPolicy = 7;
+    string encryptionType = 8;
+}
+message documentVersion {
+    string id = 1;
+    string documentId = 2;
+    int32 versionNumber = 3;
+    string uploaderUserId = 4;
+    string fileObjectId = 5;
+    google.protobuf.Timestamp uploadDate = 6;
+    string comment = 7;
+}
+message fileObject {
+    string id = 1;
+    string tenantId = 2;
+    string integrityHash = 3;
+    int32 sourceType = 4;
+    string sourceId = 5;
+    google.protobuf.Struct sourceMeta = 6;
+    int32 fileSizeBytes = 7;
+}
+
+
+
+
+
+
+message VoidRequest {}
+
+message CurrentUserReply {
+    string userId = 1;
+    string sessionId = 2;
+    string fullname = 3;
+    string email = 4;
+    string roleId = 5;
+    string avatar = 6;
+    bool emailVerified = 7;
+        string accessToken = 8;
+}
+
+message HelloMessageReply {
+    string hello = 1;
+}
+
+service documentCoreService {
+    rpc currentUser(VoidRequest) returns (CurrentUserReply);
+    rpc helloMessage(VoidRequest) returns (HelloMessageReply);
+}

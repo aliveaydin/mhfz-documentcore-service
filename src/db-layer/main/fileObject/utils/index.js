@@ -1,0 +1,15 @@
+module.exports = {
+  createFileObject: require("./createFileObject"),
+  getIdListOfFileObjectByField: require("./getIdListOfFileObjectByField"),
+  getFileObjectById: require("./getFileObjectById"),
+  getFileObjectAggById: require("./getFileObjectAggById"),
+  getFileObjectListByQuery: require("./getFileObjectListByQuery"),
+  getFileObjectStatsByQuery: require("./getFileObjectStatsByQuery"),
+  getFileObjectByQuery: require("./getFileObjectByQuery"),
+  updateFileObjectById: require("./updateFileObjectById"),
+  updateFileObjectByIdList: require("./updateFileObjectByIdList"),
+  updateFileObjectByQuery: require("./updateFileObjectByQuery"),
+  deleteFileObjectById: require("./deleteFileObjectById"),
+  deleteFileObjectByQuery: require("./deleteFileObjectByQuery"),
+  getFileObjectByIntegrityHash: require("./getFileObjectByIntegrityHash"),
+};

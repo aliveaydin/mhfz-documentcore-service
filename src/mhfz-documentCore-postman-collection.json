@@ -1,0 +1,476 @@
+{
+  "info": {
+    "name": "mhfz-documentcore-service API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "getDocument",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//documents/:documentId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documents",
+            ":documentId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createDocument",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"originalFilename\": \"String\",\n  \"status\": \"Enum\",\n  \"currentVersionId\": \"ID\",\n  \"retentionPolicy\": \"String\",\n  \"encryptionType\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//documents",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documents"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateDocument",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"Enum\",\n  \"currentVersionId\": \"ID\",\n  \"retentionPolicy\": \"String\",\n  \"encryptionType\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//documents/:documentId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documents",
+            ":documentId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteDocument",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//documents/:documentId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documents",
+            ":documentId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listDocuments",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//documents",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documents"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getDocumentVersion",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//documentversions/:documentVersionId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documentversions",
+            ":documentVersionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createDocumentVersion",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"documentId\": \"ID\",\n  \"versionNumber\": \"Integer\",\n  \"fileObjectId\": \"ID\",\n  \"uploadDate\": \"Date\",\n  \"comment\": \"String\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//documentversions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documentversions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateDocumentVersion",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//documentversions/:documentVersionId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documentversions",
+            ":documentVersionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteDocumentVersion",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//documentversions/:documentVersionId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documentversions",
+            ":documentVersionId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listDocumentVersions",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//documentversions",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "documentversions"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getFileObject",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//fileobjects/:fileObjectId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "fileobjects",
+            ":fileObjectId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "createFileObject",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"integrityHash\": \"String\",\n  \"sourceType\": \"Enum\",\n  \"sourceId\": \"String\",\n  \"sourceMeta\": \"Object\",\n  \"fileSizeBytes\": \"Integer\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//fileobjects",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "fileobjects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "updateFileObject",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{serviceUrl}}//fileobjects/:fileObjectId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "fileobjects",
+            ":fileObjectId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteFileObject",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//fileobjects/:fileObjectId",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "fileobjects",
+            ":fileObjectId"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "listFileObjects",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "ExampleValue",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{serviceUrl}}//fileobjects",
+          "host": [
+            "{{serviceUrl}}"
+          ],
+          "path": [
+            "fileobjects"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
