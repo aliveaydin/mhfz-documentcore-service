@@ -6,7 +6,4 @@ const getTemplate = (tempName) => {
   const template = fs.readFileSync(templatePath, "utf8");
   return template;
 };
-module.exports = {
-  welcomeMail: getTemplate("./welcomeMail.ejs"),
-  simpleDownloadTemplate: getTemplate("./simpleDownloadTemplate.ejs"),
-};
+module.exports = {};

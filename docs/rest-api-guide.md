@@ -55,6 +55,24 @@ Please ensure the token is correctly placed in one of these locations, using the
 
 This section outlines the API endpoints available within the DocumentCore service. Each endpoint can receive parameters through various methods, meticulously described in the following definitions. It's important to understand the flexibility in how parameters can be included in requests to effectively interact with the DocumentCore service.
 
+This service is configured to listen for HTTP requests on port `3000`,
+serving both the main API interface and default administrative endpoints.
+
+The following routes are available by default:
+
+- **API Test Interface (API Face):** `/`
+- **Swagger Documentation:** `/swagger`
+- **Postman Collection Download:** `/getPostmanCollection`
+- **Health Checks:** `/health` and `/admin/health`
+- **Current Session Info:** `/currentuser`
+- **Favicon:** `/favicon.ico`
+
+This service is accessible via the following environment-specific URLs:
+
+- **Preview:** `https://documentCore-api-mhfz.preview.mindbricks.com`
+- **Staging:** `https://documentCore-api-mhfz.staging.mindbricks.com`
+- **Production:** `https://documentCore-api-mhfz.prod.mindbricks.com`
+
 **Parameter Inclusion Methods:**
 Parameters can be incorporated into API requests in several ways, each with its designated location. Understanding these methods is crucial for correctly constructing your requests:
 

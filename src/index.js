@@ -131,7 +131,7 @@ const start = async () => {
   );
   console.log(
     "This service is built by Mindbricks Genesis Engine, version:",
-    "1.0.0",
+    "1.1.0",
   );
   console.log(
     "Project is designed with Mindbricks Pattern Ontology, version:",
