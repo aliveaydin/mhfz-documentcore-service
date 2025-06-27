@@ -15,23 +15,6 @@ const indexDataToElastic = async (data) => {
 };
 
 const validateData = (data) => {
-  const allowedFields = [
-    "id",
-    "tenantId",
-    "ownerUserId",
-    "originalFilename",
-    "status",
-    "currentVersionId",
-    "retentionPolicy",
-    "encryptionType",
-  ];
-
-  Object.keys(data).forEach((key) => {
-    if (!allowedFields.includes(key)) {
-      throw new BadRequestError(`Unexpected field "${key}" in input data.`);
-    }
-  });
-
   const requiredFields = [];
 
   requiredFields.forEach((field) => {

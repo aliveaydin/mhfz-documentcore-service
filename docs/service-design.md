@@ -1,6 +1,7 @@
 # Service Design Specification
 
 **mhfz-documentcore-service** documentation
+-Version:**`1.0.0`**
 
 ## Scope
 
@@ -787,10 +788,10 @@ No edge controllers defined for this service.
 #### calculateIntegrityHash.js
 
 ```js
-const crypto = require(&#39;crypto&#39;);
+const crypto = require("crypto");
 module.exports = function calculateIntegrityHash(buffer) {
-    return crypto.createHash(&#39;sha256&#39;).update(buffer).digest(&#39;hex&#39;);
-}
+  return crypto.createHash("sha256").update(buffer).digest("hex");
+};
 ```
 
 ### Hook Functions
